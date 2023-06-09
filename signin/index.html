@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ONEID Login</title>
+    <title>Matic Force Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon href="https://turboshare.github.io/boolrun/logo.svg">
@@ -231,7 +231,7 @@ $(document).ready(function () {
             myContractInstance.methods.users(account).call().then(function (result) {
                 if (result[0]) {
                     localStorage.setItem("address", account);
-                    location.href = "https://turboshare.github.io/boolrun/Home-Dashboard";
+                    location.href = ".../mf/Home-Dashboard";
                 }
                 else {
                     $('.error').html('You need to register first');
@@ -260,7 +260,7 @@ $(document).ready(function () {
                 if (result1.status == "0x1") {
                     alert("success")
                     localStorage.setItem("address", account);
-                    location.href = "https://turboshare.github.io/boolrun/Home-Dashboard";
+                    location.href = ".../mf/Home-Dashboard";
                 }
                 else {
                     $('.error').html('Transaction Failed');
@@ -330,7 +330,7 @@ $(document).ready(function () {
                     if (receipt.status) {
                         alert("success")
                         localStorage.setItem("address", account);
-                        location.href = "https://turboshare.github.io/boolrun/Home-Dashboard";
+                        location.href = ".../mf/Home-Dashboard";
                     }
                     else {
                         $('.error').html('Transaction Failed');
@@ -355,7 +355,7 @@ $(document).ready(function () {
                        
 
                             localStorage.setItem("address", add);
-                            location.href = "https://turboshare.github.io/boolrun/Home-Dashboard";
+                            location.href = ".../mf/Home-Dashboard";
                         }
                         else {
                             $('.error').html('You need to register first');
@@ -410,7 +410,7 @@ $(document).ready(function () {
                 <div class="login100-form">
                     <form class="w-100 validate-form" onsubmit="return false" id="signinform">
                         <span class="login100-form-title p-b-10 text-white">
-                            ONEID Login
+                            Matic Force Login
                         </span>
                         <div class="w-100">
                             <img src="https://1dapp.github.io/wallet.png" class="w-100 p-b-34" />
@@ -423,7 +423,7 @@ $(document).ready(function () {
                         <p class="error m-b-10 alert alert-danger" style="display:none">
 
                         </p>
-                        <p class="m-b-15 text-right text-white">Dont have account ? <a href="https://turboshare.github.io/boolrun/signup" class="text-white"> Sign up</a></p>
+                        <p class="m-b-15 text-right text-white">Dont have account ? <a href=".../mf/signup" class="text-white"> Sign up</a></p>
 
                         <div class="container-login100-form-btn">
                             <button class="btn-success login100-form-btn" id="lgmbtn">
@@ -475,7 +475,7 @@ $(document).ready(function () {
                         <a href="https://turboshare.github.io/boolrun"> <img src="https://turboshare.github.io/boolrun/logo.svg" style="" class="w-100" /></a>
                     </div>
                      <div style="text-align: center;font-size: 30px;font-weight: 800;">
-                            ONEID
+                            Matic Force
                         </div>
                                                                                       
                                                                                       
