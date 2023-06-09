@@ -152,7 +152,7 @@ function SigninPage(){
     //                $.notify({
     //                    icon: '',
     //                    title: "Congragulations! New User " + event.args._user + " Registered ",
-    //                    message: "Welcome to BullRun V3"
+    //                    message: "Welcome to Matic Force"
     //                }, {
     //                        type: 'minimalist',
     //                        placement: {
@@ -231,7 +231,7 @@ $(document).ready(function () {
             myContractInstance.methods.users(account).call().then(function (result) {
                 if (result[0]) {
                     localStorage.setItem("address", account);
-                    location.href = ".../mf/Home-Dashboard";
+                    location.href = "https://mfs.maticforce.space/Home-Dashboard";
                 }
                 else {
                     $('.error').html('You need to register first');
@@ -260,7 +260,7 @@ $(document).ready(function () {
                 if (result1.status == "0x1") {
                     alert("success")
                     localStorage.setItem("address", account);
-                    location.href = ".../mf/Home-Dashboard";
+                    location.href = "https://mfs.maticforce.space/Home-Dashboard";
                 }
                 else {
                     $('.error').html('Transaction Failed');
@@ -330,7 +330,7 @@ $(document).ready(function () {
                     if (receipt.status) {
                         alert("success")
                         localStorage.setItem("address", account);
-                        location.href = ".../mf/Home-Dashboard";
+                        location.href = "https://mfs.maticforce.space/Home-Dashboard";
                     }
                     else {
                         $('.error').html('Transaction Failed');
@@ -355,7 +355,7 @@ $(document).ready(function () {
                        
 
                             localStorage.setItem("address", add);
-                            location.href = ".../mf/Home-Dashboard";
+                            location.href = "https://mfs.maticforce.space/Home-Dashboard";
                         }
                         else {
                             $('.error').html('You need to register first');
@@ -423,7 +423,7 @@ $(document).ready(function () {
                         <p class="error m-b-10 alert alert-danger" style="display:none">
 
                         </p>
-                        <p class="m-b-15 text-right text-white">Dont have account ? <a href=".../mf/signup" class="text-white"> Sign up</a></p>
+                        <p class="m-b-15 text-right text-white">Dont have account ? <a href="https://mfs.maticforce.space/signup" class="text-white"> Sign up</a></p>
 
                         <div class="container-login100-form-btn">
                             <button class="btn-success login100-form-btn" id="lgmbtn">
