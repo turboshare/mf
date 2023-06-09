@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ONEID Signup</title>
+    <title>MATIC FORCE Signup</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="https://turboshare.github.io/boolrun/logo.svg">
@@ -131,7 +131,7 @@ $(document).ready(function () {
             myContractInstance.methods.users(account).call().then(function (result) {
                 if (result[0]) {
                     localStorage.setItem("address", account);
-                    location.href = "../Home-Dashboard/";
+                    location.href = "https://mfs.maticforce.space/Home-Dashboard";
                 }
                 else {
                     $('.error').html('You need to register first');
@@ -160,7 +160,7 @@ $(document).ready(function () {
                 if (result1.status == "0x1") {
                     alert("success")
                     localStorage.setItem("address", account);
-                    location.href = "../Home-Dashboard/";
+                    location.href = "https://mfs.maticforce.space/Home-Dashboard";
                 }
                 else {
                     $('.error').html('Transaction Failed');
@@ -230,7 +230,7 @@ $(document).ready(function () {
                     if (receipt.status) {
                         alert("success")
                         localStorage.setItem("address", account);
-                        location.href = "../Home-Dashboard/";
+                        location.href = "https://mfs.maticforce.space/Home-Dashboard";
                     }
                     else {
                         $('.error').html('Transaction Failed');
@@ -255,7 +255,7 @@ $(document).ready(function () {
                        
 
                             localStorage.setItem("address", add);
-                            location.href = "../Home-Dashboard/";
+                            location.href = "https://mfs.maticforce.space/Home-Dashboard";
                         }
                         else {
                             $('.error').html('You need to register first');
@@ -272,7 +272,7 @@ $(document).ready(function () {
 
         }
         else {
-            $('.error').html('Enter Valid ETH address');
+            $('.error').html('Enter Valid MATIC address');
             $('.error').show();
         }
     });
@@ -306,7 +306,7 @@ $(document).ready(function () {
                    
                     <form class="w-100 validate-form" onsubmit="return false" id="signupform">
                         <span class="login100-form-title p-b-10 text-white">
-                            ONEID Signup
+                            MATIC FORCE Signup
                             <div class="ttttt"></div>
                         </span>
                         <div class="w-100">
@@ -326,7 +326,7 @@ $(document).ready(function () {
                         <p class="error m-b-10 alert alert-danger" style="display:none">
 
                         </p>
-                        <p class="m-b-15 text-right text-white">Allready have account ? <a href="../signin" class="text-white"> Sign in</a></p>
+                        <p class="m-b-15 text-right text-white">Allready have account ? <a href="https://mfs.maticforce.space/signin" class="text-white"> Sign in</a></p>
                         <div class="container-login100-form-btn">
                             <button class="login100-form-btn" id="lgmbtnsup">
                                 Sign up
