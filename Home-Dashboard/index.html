@@ -531,7 +531,7 @@ window.addEventListener('load', function () {
         
         if (web3.currentProvider.isTrust) {
 
-            const infura = 'https://mainnet.infura.io/v3/a380edd901454cf6ba4b4cefe4c8f7be';
+            const infura = 'https://polygon-mainnet.infura.io/v3/c2b1f9ce72254350a04f5759c898c8b3';
             const web3 = new Web3(new Web3.providers.HttpProvider(infura));
             MyContract = new web3.eth.Contract(abi, address);
             myContractInstance = MyContract;
@@ -545,7 +545,7 @@ window.addEventListener('load', function () {
     } else {
         //  const Web3 = require('web3');
 
-        const infura = 'https://mainnet.infura.io/v3/a380edd901454cf6ba4b4cefe4c8f7be';
+        const infura = 'https://polygon-mainnet.infura.io/v3/c2b1f9ce72254350a04f5759c898c8b3';
         const web3 = new Web3(new Web3.providers.HttpProvider(infura));
         MyContract = new web3.eth.Contract(abi, address);
         myContractInstance = MyContract;
