@@ -195,6 +195,26 @@ function getVariableData() {
         $('.pool10_current_address').html("<a href=https://polygonscan.com/address/" + result + " target=_blank>" + result + "</a>");
     });
 
+    myContractInstance.methods.users(account).call().then(function (result1) {
+        
+            $('.currentuseridlink').html("https://mfs.maticforce.space/signup/?referralid=" + result1.id);
+
+
+
+
+            $('.currentuseridlink').val("https://mfs.maticforce.space/signup/?referralid=" + result1.id);
+
+
+
+
+            $('.sharebutton').attr('data-url', "https://mfs.maticforce.space/signup/?referralid=" + result1.id);
+            $('.currentuserid').html(result1.id);
+            $('.currentaddress').html(account);
+            $('.ethaddress').attr('href', 'https://polygonscan.com/address/' + account);
+        
+    });
+
+  
 
 
     myContractInstance.methods.currUserID().call().then(function (result) {
@@ -533,27 +553,6 @@ window.addEventListener('load', function () {
         Transaction_Pool();
        // document.getElementById('output').innerHtml = 'Please download and install Metamask: <a href="https://metamask.io/">https://metamask.io/</a>'
     }
-
-  myContractInstance.methods.users(account).call().then(function (result1) {
-        
-            $('.currentuseridlink').html("https://mfs.maticforce.space/signup/?referralid=" + result1.id);
-
-
-
-
-            $('.currentuseridlink').val("https://mfs.maticforce.space/signup/?referralid=" + result1.id);
-
-
-
-
-            $('.sharebutton').attr('data-url', "https://mfs.maticforce.space/signup/?referralid=" + result1.id);
-            $('.currentuserid').html(result1.id);
-            $('.currentaddress').html(account);
-            $('.ethaddress').attr('href', 'https://polygonscan.com/address/' + account);
-        
-    });
-
-  
 
 });
             
