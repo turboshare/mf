@@ -286,16 +286,15 @@ function getReferralCommission() {
 
 
 function getPoolPaymentReceived() {
-    var pool1_price = 0.1;
-    var pool2_price = 0.2;
-    var pool3_price = 0.5;
-    var pool4_price = 1;
-    var pool5_price = 2;
-    var pool6_price = 5;
-    var pool7_price = 10;
-    var pool8_price = 20;
-    var pool9_price = 50;
-    var pool10_price = 100;
+    var pool1_price = 10;
+    var pool2_price = 50;
+    var pool3_price = 100;
+    var pool4_price = 500;
+    var pool5_price = 1000;
+    var pool6_price = 5000;
+    var pool7_price = 10000;
+    var pool8_price = 50000;
+    
 
     var referraltotal = parseFloat(0);
 
@@ -484,17 +483,15 @@ function Transaction_Register() {
 
 function Transaction_Pool() {
     var events = myContractInstance.getPastEvents('getPoolPayment', {filter:{ _receiver: account },  'fromBlock': 0, 'toBlock': 'latest' }, function (error, log) {
-        var pool1_price = 0.1;
-        var pool2_price = 0.2;
-        var pool3_price = 0.5;
-        var pool4_price = 1;
-        var pool5_price = 2;
-        var pool6_price = 5;
-        var pool7_price = 10;
-        var pool8_price = 20;
-        var pool9_price = 50;
-        var pool10_price = 100;
-
+        var pool1_price = 10;
+        var pool2_price = 50;
+        var pool3_price = 100;
+        var pool4_price = 500;
+        var pool5_price = 1000;
+        var pool6_price = 5000;
+        var pool7_price = 10000;
+        var pool8_price = 50000;
+       
         if (!error) {
             $.each(log, function (key, value) {
                 $('.transaction_autopool').append('<tr><td><a href="https://polygonscan.com/tx/' + value.transactionHash + '" target="_blank">' + value.transactionHash + '</a></td><td style=color:green>' + value.returnValues._user + '</td><td>' + value.returnValues._level + '</td><td>' + (value.returnValues._level == 1 ? pool1_price : value.returnValues._level == 2 ? pool2_price : value.returnValues._level == 3 ? pool3_price : value.returnValues._level == 4 ? pool4_price : value.returnValues._level == 5 ? pool5_price : value.returnValues._level == 6 ? pool6_price : value.returnValues._level == 7 ? pool7_price : value.returnValues._level == 8 ? pool8_price : value.returnValues._level == 9 ? pool9_price : pool10_price) + ' ETH</td></tr>');
@@ -858,70 +855,6 @@ function checkPool8() {
 
 }
 
-function checkPool9() {
-    myContractInstance.methods.pool9users(account).call().then(function ( result) {
-        if(result[1] > 0){
-        $('#pool9sequencue').text(result[1])
-        $('#pool9sequencue').show();
-        $('.pool9sequencue').show();}
-       
-            if (!result[0]) {
-                $('.pool9pay').show();
-                $('.pool9transaction').hide();
-            }
-            else if (result[2] == 3) {
-                $('.pool9status').show();
-                $('.pool9status .card-status').addClass('bg-success');
-                $('.pool9status .ribbon').addClass('text-success').html('<span class="bg-success">Completed</span>');
-                $('.pool9transaction').html('Received No. of Payments ' + result[2]);
-
-
-            }
-            else if (result[2] < 3) {
-                $('.pool9status').show();
-                $('.pool9status .card-status').addClass('bg-warning');
-                $('.pool9status .ribbon').addClass('text-warning').html('<span class="bg-warning">Active</span>');
-                $('.pool9transaction').html('Received No. of Payments ' + result[2]); $('.currentautopoolno').html(9);
-            }
-
-
-        
-
-    });
-
-}
-
-function checkPool10() {
-    myContractInstance.methods.pool10users(account).call().then(function (result) {
-        if(result[1] > 0){
-        $('#pool10sequencue').text(result[1])
-        $('#pool10sequencue').show();
-        $('.pool10sequencue').show();}
-       
-            if (!result[0]) {
-                $('.pool10pay').show();
-                $('.pool10transaction').hide();
-            }
-            else if (result[2] == 3) {
-                $('.pool10status').show();
-                $('.pool10status .card-status').addClass('bg-success');
-                $('.pool10status .ribbon').addClass('text-success').html('<span class="bg-success">Completed</span>');
-                $('.pool10transaction').html('Received No. of Payments ' + result[2]);
-                $('.currentautopoolno').html(10);
-            }
-            else if (result[2] < 3) {
-                $('.pool10status').show();
-                $('.pool10status .card-status').addClass('bg-warning');
-                $('.pool10status .ribbon').addClass('text-warning').html('<span class="bg-warning">Active</span>');
-                $('.pool10transaction').html('Received No. of Payments ' + result[2]); $('.currentautopoolno').html(10);
-            }
-
-
-       
-
-    });
-
-}
 $(document).ready(function () {
     $('.pool1pay').click(function (demo) {
        
